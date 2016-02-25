@@ -69,6 +69,10 @@ on init
     # Update dm-verity state and set partition.*.verified properties
     #verity_update_state
 
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
     verity_update_state
