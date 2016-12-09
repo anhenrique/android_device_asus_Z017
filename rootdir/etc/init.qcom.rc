@@ -69,6 +69,11 @@ on init
     # Update dm-verity state and set partition.*.verified properties
     #verity_update_state
 
+
+# Wifi firmware reload path
+     chown wifi wifi /sys/module/wlan/parameters/fwpath
+ 
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
