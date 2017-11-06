@@ -1,0 +1,2 @@
+debug.gralloc.enable_fb_ubwc 1
+debug.gralloc.gfx_ubwc_disable 0
