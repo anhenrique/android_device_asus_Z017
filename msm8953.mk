@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017 AIMROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,9 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from qcom318-32
+# Inherit from Z017
 TARGET_BOARD_PLATFORM := msm8953
-$(call inherit-product, device/motorola/qcom318-32/qcom318-32.mk)
+$(call inherit-product, device/asus/Z017/full_Z017.mk)
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -27,4 +27,4 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.platform.rc
 
-$(call inherit-product-if-exists, vendor/motorola/msm8953-common/msm8953-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/asus/Z017/Z017-vendor.mk)
