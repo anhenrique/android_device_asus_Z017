@@ -67,6 +67,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \
+    libshim_adsp
 
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
@@ -126,6 +127,11 @@ PRODUCT_PACKAGES += \
     fm_helium \
     qcom.fmradio \
     fmhal_service
+
+# Netutils
+ PRODUCT_PACKAGES += \
+     netutils-wrapper-1.0
+ 
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -363,11 +369,19 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2 \
     libtar \
-    libprotobuf-cpp-lite
+	libprotobuf-cpp-full \
+    rild_socket
+ 
+ # Seccomp policy
+ PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.msm8953
+
+PRODUCT_PACKAGES += \
+     android.hardware.sensors@1.0-impl
 
 # Vibrator
  PRODUCT_PACKAGES += \
@@ -409,11 +423,16 @@ PRODUCT_PACKAGES += \
     tcpdump \
     wificond \
     wifilogd \
-    wcnss_service
+    wcnss_service \
+    libwpa_client
 
 PRODUCT_PACKAGES += \
     fstman \
     fstman.ini
+
+# Launcher3
+ PRODUCT_PACKAGES += \
+     Launcher3
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -688,3 +707,5 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.platform.rc
+
+PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8996/kernel-headers
