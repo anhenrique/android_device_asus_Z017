@@ -711,4 +711,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.platform.rc
 
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+     sys.usb.config=mtp,adb \
+     persist.sys.usb.config=mtp,adb \
+     ro.adb.secure=0
+ 
+
 PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8996/kernel-headers
