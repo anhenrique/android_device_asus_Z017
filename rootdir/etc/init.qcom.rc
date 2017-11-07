@@ -94,7 +94,6 @@ on early-boot
     # ASUS_BSP Show_Cai --- Check device support poweroff alarm
     # set wifi link file.
     setprop wlan.driver.ath 0
-    setprop wlan.driver.status unloaded
     setprop wlan.softap.driver.status unloaded
     setprop persist.debug.wifi_user_list 1
     setprop wlan.driver.config /system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
