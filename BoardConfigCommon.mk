@@ -14,11 +14,10 @@
 # limitations under the License.
 
 # inherit from the proprietary version
- include device/asus/Z017/BoardConfig.mk
+# include device/asus/Z017/BoardConfig.mk
 
 # Paths
 COMMON_PATH := device/asus/msm8953-common
--include vendor/asus/msm8953-common/BoardConfigVendor.mk
 
 VENDOR_PATH := vendor/asus/msm8953-common
 
@@ -62,6 +61,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00008000
 BOARD_RAMDISK_OFFSET     := 0x01000000
 TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/asus/Z017
 TARGET_KERNEL_CONFIG := ze520kl-userdebug_defconfig
