@@ -646,11 +646,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     rmnetcli
 
-# Doze
-PRODUCT_PACKAGES += \
-   ZenfoneDoze
-
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
