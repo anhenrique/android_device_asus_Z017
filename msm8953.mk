@@ -211,7 +211,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    fingerprintd
+    android.hardware.biometrics.fingerprint@2.1-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fpservice.sh:system/etc/fpservice.sh
