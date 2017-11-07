@@ -98,7 +98,8 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-smd"
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
-BOARD_QTI_CAMERA_32BIT_ONLY := true
+TARGET_USES_NON_TREBLE_CAMERA := true
+TARGET_CAMERASERVICE_CLOSES_NATIVE_HANDLES := true
 
 # Charger
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
