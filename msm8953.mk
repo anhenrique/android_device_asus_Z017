@@ -67,7 +67,8 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \
-    libshim_adsp
+    libshim_adsp \
+    libtinycompress
 
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
