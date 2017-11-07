@@ -218,7 +218,8 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8953 \
-    libgnsspps
+    libgnsspps \
+    libshims_get_process_name
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/gps.conf:system/etc/gps.conf \
