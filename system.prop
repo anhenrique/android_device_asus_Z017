@@ -216,7 +216,7 @@ persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
 persist.data.iwlan.enable=true
 
-ro.sys.sdcardfs=false
+#ro.sys.sdcardfs=false
 
 # USB
 ro.usb.mtp=0x2e82
