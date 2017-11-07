@@ -359,6 +359,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcurl \
     tcpdump \
+    wificond \
     wcnss_service
 
 PRODUCT_PACKAGES += \
