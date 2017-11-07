@@ -3,3 +3,4 @@ debug.gralloc.gfx_ubwc_disable 0
 
 persist.media.treble_omx=false
 persist.camera.HAL3.enabled=1
+ro.sys.sdcardfs=false
