@@ -356,6 +356,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
     $(LOCAL_PATH)/configs/wifi/WCNSS_wlan_dictionary.dat:system/etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
 
+# WiFi HAL
+ PRODUCT_PACKAGES += \
+     android.hardware.wifi@1.0-service
+
 PRODUCT_PACKAGES += \
     libcurl \
     tcpdump \
