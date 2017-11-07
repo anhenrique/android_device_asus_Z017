@@ -131,9 +131,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8953 \
     bspcapability \
-    Snap \
     libbson \
-    libshim_camera
+    libshim_camera \
+	Snap \
+    camera.device@3.2-impl \
+    android.hardware.camera.provider@2.4-impl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/msm8996_camera.xml:system/etc/camera/msm8996_camera.xml \
@@ -209,6 +211,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjni_livedisplay
 
+# DRM
+ PRODUCT_PACKAGES += \
+     android.hardware.drm@1.0-impl \
+ 
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
@@ -229,6 +235,18 @@ PRODUCT_PACKAGES += \
 # Browser
 PRODUCT_PACKAGES += \
     Gello
+
+# Gatekeeper HAL
+ PRODUCT_PACKAGES += \
+     android.hardware.gatekeeper@1.0-impl
+
+# GNSS HAL
+ PRODUCT_PACKAGES += \
+     android.hardware.gnss@1.0-impl
+ 
+# USB HAL
+ PRODUCT_PACKAGES += \
+     android.hardware.usb@1.0-service
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -273,7 +291,8 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8953
+	  lights.msm8953 \
+      android.hardware.light@2.0-impl
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -306,7 +325,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.msm8953
+    power.msm8953 \
+    android.hardware.power@1.0-impl
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -345,6 +365,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     sensors.msm8953
 
+# Vibrator
+ PRODUCT_PACKAGES += \
+     android.hardware.vibrator@1.0-impl
+
 # Wifi
 PRODUCT_PACKAGES += \
     ipacm \
@@ -380,6 +404,7 @@ PRODUCT_PACKAGES += \
     libcurl \
     tcpdump \
     wificond \
+    wifilogd \
     wcnss_service
 
 PRODUCT_PACKAGES += \
@@ -389,6 +414,10 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     libshim_ims
+
+# Keymaster HAL
+ PRODUCT_PACKAGES += \
+     android.hardware.keymaster@3.0-impl
 
 # Thermal
 PRODUCT_COPY_FILES += \
