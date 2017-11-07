@@ -20,8 +20,10 @@
 #include <cutils/properties.h>
 #include <string.h>
 
-#define BTM_DEF_LOCAL_NAME "ZenFone 3"
-#define BTA_DISABLE_DELAY 1000 /* in milliseconds */
+#define BTM_DEF_LOCAL_NAME "Moto G5 Plus"
 #define BLUETOOTH_QTI_SW TRUE
-#define BLE_VND_INCLUDED   TRUE
+#define MAX_ACL_CONNECTIONS   16
+#define MAX_L2CAP_CHANNELS    16
+#define BLE_VND_INCLUDED TRUE
+#define BT_CLEAN_TURN_ON_DISABLED TRUE
 #endif
