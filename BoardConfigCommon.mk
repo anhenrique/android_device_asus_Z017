@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # inherit from the proprietary version
- include device/asus/Z017/BoardConfigCommon.mk
+ include device/asus/Z017/BoardConfig.mk
 
 # Paths
 COMMON_PATH := device/asus/msm8953-common

@@ -20,7 +20,7 @@ TARGET_BOARD_PLATFORM := msm8953
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # call vendor
-$(call inherit-product-if-exists, vendor/asus/msm8953/msm8953-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/asus/msm8953-common/msm8953-common-vendor.mk)
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
