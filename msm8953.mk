@@ -15,7 +15,6 @@
 
 # Inherit from Z017
 TARGET_BOARD_PLATFORM := msm8953
-$(call inherit-product, device/asus/Z017/full_Z017.mk)
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -27,4 +26,4 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.platform.rc
 
-$(call inherit-product-if-exists, vendor/asus/Z017/Z017-vendor.mk)
+$(call inherit-product-if-exists, vendor/asus/msm8953/msm8953-common-vendor.mk)

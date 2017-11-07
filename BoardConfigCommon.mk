@@ -13,11 +13,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-VENDOR_PATH := device/asus/Z017
+# inherit from the proprietary version
+ include device/asus/Z017/BoardConfigCommon.mk
+
+# Paths
+COMMON_PATH := device/asus/msm8953-common
+-include vendor/asus/msm8953-common/BoardConfigVendor.mk
+
+VENDOR_PATH := vendor/asus/msm8953-common
 
 BOARD_VENDOR := asus-qcom
 
-TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8953
@@ -58,7 +65,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/asus/Z017
 TARGET_KERNEL_CONFIG := ze520kl-userdebug_defconfig
-TARGET_PREBUILT_KERNEL := $(VENDOR_PATH)/kernel
+TARGET_PREBUILT_KERNEL := $(COMMON_PATH)/kernel
 
 # Audio
 # for TFA98XX {
@@ -85,7 +92,7 @@ AUDIO_FEATURE_ENABLED_FLAC_OFFLOAD := true
 TARGET_USES_QCOM_MM_AUDIO := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(VENDOR_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
@@ -124,7 +131,7 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
-BOARD_EGL_CFG := $(VENDOR_PATH)/configs/egl.cfg
+BOARD_EGL_CFG := $(COMMON_PATH)/configs/egl.cfg
 BOARD_USES_ADRENO := true
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
@@ -172,14 +179,14 @@ TARGET_RIL_VARIANT := caf
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 #TARGET_KERNEL_HAVE_EXFAT := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 
 # Sensors
 USE_SENSOR_MULTI_HAL := true
@@ -214,9 +221,3 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
-
-# inherit from the proprietary version
- include device/asus/Z017/BoardConfigCommon.mk
-
-PLATFORM_PATH := device/asus/msm8953-common
--include vendor/asus/Z017/BoardConfigVendor.mk
