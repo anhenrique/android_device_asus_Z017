@@ -22,4 +22,7 @@ LOCAL_C_INCLUDES := system/core/init
 LOCAL_SRC_FILES := init_zenfone3.cpp
 LOCAL_MODULE := libinit_zenfone3
 
+LOCAL_STATIC_LIBRARIES := \
+    libbase
+
 include $(BUILD_STATIC_LIBRARY)

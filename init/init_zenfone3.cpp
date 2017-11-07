@@ -32,8 +32,10 @@
 
 #include "vendor_init.h"
 #include "property_service.h"
-#include "log.h"
-#include "util.h"
+#include <android-base/properties.h>
+
+namespace android {
+namespace init {
 
 void property_override(char const prop[], char const value[])
 {
@@ -48,7 +50,7 @@ void property_override(char const prop[], char const value[])
 
 void vendor_load_properties()
 {
-    std::string project = property_get("ro.boot.id.prj");
+    std::string project = android::base::GetProperty("ro.boot.id.prj","");
     property_set("ro.product.name", "WW_Phone");
     if (project == "6") {
         property_override("ro.build.product", "ZE520KL");
