@@ -140,7 +140,7 @@ PRODUCT_PACKAGES += \
     bspcapability \
     libbson \
     libshim_camera \
-	Snap \
+    Snap \
     camera.device@3.2-impl \
     android.hardware.camera.provider@2.4-impl
 
